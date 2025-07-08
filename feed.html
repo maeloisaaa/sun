@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sun - Feed</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feed.html" class="active">Feed</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="titulo-principal">Sun 🌞 - Feed Comunitário</h1>
+
+    <p><a href="index.html">← Voltar para Home</a></p>
+
+    <section id="postar-ideia">
+      <h2>Compartilhe seus pensamentos</h2>
+      <textarea id="input-post" rows="4" placeholder="Escreva aqui suas ideias, pensamentos ou como está seu humor..."></textarea>
+      <br />
+      <button id="btn-postar">Publicar</button>
+    </section>
+
+    <section id="feed-posts">
+      <h2>Postagens da comunidade</h2>
+      <ul id="lista-posts">
+        <!-- Posts vão aparecer aqui -->
+      </ul>
+    </section>
+
+    <div class="links-rapidos">
+      <p>Quer cuidar da mente? <a href="index.html">Volte para a Home</a> para conhecer mais funcionalidades.</p>
+      <p>Saiba mais sobre saúde mental em <a href="https://www.who.int/mental_health" target="_blank" rel="noopener noreferrer">WHO - Saúde Mental</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Sun - Saúde Mental | Desenvolvido por Você</p>
+  </footer>
+
+  <script>
+    const btnPostar = document.getElementById("btn-postar");
+    const inputPost = document.getElementById("input-post");
+    const listaPosts = document.getElementById("lista-posts");
+
+    btnPostar.addEventListener("click", () => {
+      const texto = inputPost.value.trim();
+      if (texto === "") {
+        alert("Por favor, escreva algo para postar.");
+        return;
+      }
+
+      const novoPost = document.createElement("li");
+      novoPost.textContent = texto;
+      novoPost.classList.add("post-item");
+      listaPosts.prepend(novoPost);
+
+      inputPost.value = "";
+    });
+  </script>
+</body>
+</html>

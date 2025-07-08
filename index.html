@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sun - Saúde Mental</title>
+  <title>Sun - Home</title>
   <link rel="stylesheet" href="css/estilo.css" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet" />
 </head>
@@ -20,101 +20,38 @@
   </header>
 
   <main>
-    <h1 id="titulo-principal">Sun 🌞 - Cuide da sua mente</h1>
+    <h1 id="titulo-principal">Sun 🌞 - Seu Espaço para Saúde Mental</h1>
 
-    <section id="humor">
-      <h2>Como você está se sentindo hoje?</h2>
-      <select id="seletor-humor">
-        <option value="">Selecione seu humor</option>
-        <option value="feliz">Feliz 😊</option>
-        <option value="triste">Triste 😢</option>
-        <option value="ansioso">Ansioso 😰</option>
-        <option value="calmo">Calmo 😌</option>
-        <option value="cansado">Cansado 😴</option>
-      </select>
-      <p id="resposta-humor"></p>
+    <section id="humor-emocoes">
+      <h2>Administrador de Humores e Emoções</h2>
+      <p>Registre e acompanhe como você está se sentindo diariamente.</p>
+      <!-- Conteúdo fictício para exemplo -->
     </section>
 
-    <section id="frases">
-      <h2>Frase motivacional</h2>
-      <blockquote class="frase">"A felicidade depende de nós mesmos." - Aristóteles</blockquote>
-      <blockquote class="frase">"Respire fundo, você está indo bem."</blockquote>
-      <blockquote class="frase">"Pequenos passos levam a grandes mudanças."</blockquote>
+    <section id="frases-motivacao">
+      <h2>Frases de Motivação</h2>
+      <blockquote>"A vida é 10% o que acontece e 90% como reagimos." - Charles R. Swindoll</blockquote>
+      <blockquote>"Você é mais forte do que imagina."</blockquote>
     </section>
 
-    <section id="sono">
-      <h2>Quantas horas você dormiu?</h2>
-      <input type="number" id="input-sono" min="0" max="24" placeholder="Horas de sono" />
-      <button id="btn-sono">Registrar sono</button>
-      <p id="resposta-sono"></p>
+    <section id="pet-planta">
+      <h2>Cuide de um Pet ou Planta Virtual</h2>
+      <p>Ocupe a mente criando e cuidando de um amigo virtual.</p>
     </section>
 
-    <section id="agua">
-      <h2>Lembrete para tomar água</h2>
-      <button id="btn-agua">Já tomou água hoje?</button>
-      <p id="resposta-agua"></p>
+    <section id="sono-agua">
+      <h2>Contador de Horas de Sono e Lembrete de Água</h2>
+      <p>Monitore seu sono e receba lembretes para se hidratar.</p>
     </section>
 
-    <section id="pet">
-      <h2>Seu pet/planta virtual</h2>
-      <img src="download.jpg" />
-      <br />
-      <button id="btn-cuidar">Cuidar da planta</button>
-      <p id="resposta-pet"></p>
-    </section>
+    <div class="links-rapidos">
+      <p>Quer interagir? <a href="feed.html">Veja o Feed da comunidade</a> ou <a href="login.html">faça login</a>.</p>
+      <p>Para aprender mais sobre saúde mental, visite <a href="https://www.mentalhealth.gov" target="_blank" rel="noopener noreferrer">MentalHealth.gov</a>.</p>
+    </div>
   </main>
 
   <footer>
     <p>© 2025 Sun - Saúde Mental | Desenvolvido por Você</p>
   </footer>
-
-  <script>
-    // Humor
-    const seletorHumor = document.getElementById("seletor-humor");
-    const respostaHumor = document.getElementById("resposta-humor");
-
-    seletorHumor.addEventListener("change", () => {
-      const humor = seletorHumor.value;
-      if (humor) {
-        respostaHumor.textContent = `Você está se sentindo ${humor}. Lembre-se de cuidar de você!`;
-      } else {
-        respostaHumor.textContent = "";
-      }
-    });
-
-    // Sono
-    const btnSono = document.getElementById("btn-sono");
-    const inputSono = document.getElementById("input-sono");
-    const respostaSono = document.getElementById("resposta-sono");
-
-    btnSono.addEventListener("click", () => {
-      const horas = inputSono.value;
-      if (horas === "" || horas < 0 || horas > 24) {
-        respostaSono.textContent = "Por favor, insira um número válido de horas (0-24).";
-        respostaSono.style.color = "#E53E3E";
-      } else {
-        respostaSono.textContent = `Você dormiu ${horas} hora(s). Ótimo para sua saúde mental!`;
-        respostaSono.style.color = "#2F855A";
-      }
-    });
-
-    // Água
-    const btnAgua = document.getElementById("btn-agua");
-    const respostaAgua = document.getElementById("resposta-agua");
-
-    btnAgua.addEventListener("click", () => {
-      respostaAgua.textContent = "Muito bem! Manter-se hidratado é fundamental para a mente e corpo.";
-      respostaAgua.style.color = "#319795";
-    });
-
-    // Cuidar do pet/planta
-    const btnCuidar = document.getElementById("btn-cuidar");
-    const respostaPet = document.getElementById("resposta-pet");
-
-    btnCuidar.addEventListener("click", () => {
-      respostaPet.textContent = "Você cuidou da sua planta! Ela está mais feliz 🌱.";
-      respostaPet.style.color = "#276749";
-    });
-  </script>
 </body>
 </html>
