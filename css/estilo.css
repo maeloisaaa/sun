@@ -1,0 +1,147 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cores */
+:root {
+  --lilas: #B19CD9;
+  --roxo-escuro: #6A4C93;
+  --verde-menta: #CFFAFE;
+  --rosa-claro: #F4C2C2;
+}
+
+/* Body e fonte */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--verde-menta);
+  color: var(--roxo-escuro);
+  text-align: center;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  border: 3px solid var(--lilas);
+  border-radius: 15px;
+}
+
+/* Menu */
+.menu ul {
+  list-style: none;
+  background-color: var(--lilas);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.menu ul li {
+  margin: 0 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+  background-color: var(--roxo-escuro);
+}
+
+/* Título principal */
+#titulo-principal {
+  font-family: 'Poppins', sans-serif;
+  color: var(--roxo-escuro);
+  margin-bottom: 30px;
+}
+
+/* Seções */
+section {
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgb(106 76 147 / 0.2);
+}
+
+/* Subtítulos */
+section h2 {
+  font-family: 'Dancing Script', cursive;
+  color: var(--lilas);
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+/* Select, input, button */
+select, input[type="number"], button {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid var(--lilas);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+select:hover, input[type="number"]:hover, button:hover {
+  border-color: var(--roxo-escuro);
+  cursor: pointer;
+}
+
+button {
+  background-color: var(--lilas);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--roxo-escuro);
+}
+
+/* Frases motivacionais */
+.frase {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  margin: 10px 0;
+  color: var(--roxo-escuro);
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.frase:hover {
+  color: var(--rosa-claro);
+}
+
+/* Imagem pet/planta */
+#imagem-pet {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(177 156 217 / 0.5);
+}
+
+/* Respostas dinâmicas */
+#resposta-humor, #resposta-sono, #resposta-agua, #resposta-pet {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: var(--roxo-escuro);
+  font-family: 'Open Sans', sans-serif;
+}
