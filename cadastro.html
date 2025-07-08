@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sun - Cadastro</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feed.html">Feed</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cadastro.html" class="active">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="titulo-principal">Sun 🌞 - Cadastro</h1>
+
+    <section id="cadastro-form">
+      <form>
+        <label for="nome">Nome completo:</label><br />
+        <input type="text" id="nome" required placeholder="Seu nome" /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" required placeholder="seuemail@exemplo.com" /><br /><br />
+
+        <label for="senha">Senha:</label><br />
+        <input type="password" id="senha" required placeholder="Sua senha" /><br /><br />
+
+        <button type="submit">Criar conta</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sun - Saúde Mental | Desenvolvido por Você</p>
+  </footer>
+
+  <script>
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const senha = document.getElementById("senha").value.trim();
+
+      if (nome && email && senha) {
+        alert(`Conta criada com sucesso, ${nome}! (simulação)`);
+        window.location.href = "login.html";
+      } else {
+        alert("Preencha todos os campos.");
+      }
+    });
+  </script>
+</body>
+</html>
